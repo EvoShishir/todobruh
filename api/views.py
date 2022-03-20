@@ -23,11 +23,13 @@ def getRoutes(request):
 
     routes = [
         {'GET': '/get-task'},
+        {'GET': '/view-task/<str:pk>'},
         {'POST': '/add-task'},
+        {'POST': '/update-task/<str:pk>'},
+        {'DELETE': '/delete-task/<str:pk>'},
         {'POST': '/register'},
         {'POST': '/login'},
         {'POST': '/logout'},
-        {'POST': '/change-password'},
         {'POST': '/token'},
         {'POST': '/token/refresh'},
     ]
