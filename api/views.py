@@ -45,7 +45,7 @@ def getTask(request, pk):
 
     # payload = jwt.decode(token, 'secret', algorithms='HS256')
 
-    tasks = Task.objects.filter(owner=pk)
+    tasks = Task.objects.all
     serializer = TaskSerializer(tasks, many=True)
     return Response(serializer.data)
 
