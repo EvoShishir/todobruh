@@ -37,15 +37,8 @@ def getRoutes(request):
 
 
 @api_view(['GET'])
-def getTask(request, pk):
-    # token = request.META.get('HTTP_AUTHORIZATION')
-    # if not token:
-    #     return Response(status=status.HTTP_401_UNAUTHORIZED)
-    # token = token.split(' ')[1]
-
-    # payload = jwt.decode(token, 'secret', algorithms='HS256')
-
-    tasks = Task.objects.all
+def getTask(request):
+    tasks = Task.objects.all()
     serializer = TaskSerializer(tasks, many=True)
     return Response(serializer.data)
 
