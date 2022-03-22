@@ -6,7 +6,7 @@ from .views import RegisterAPI, LoginAPI, getRoutes
 
 urlpatterns = [
     path('', views.getRoutes),
-    path('get-task/<str:pk>', views.getTask),
+    path('get-task/', views.getTask),
     path('add-task/', views.addTask),
     path('update-task/<str:pk>', views.updateTask),
     path('view-task/<str:pk>', views.viewTask),
